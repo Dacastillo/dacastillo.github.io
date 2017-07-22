@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Infostructuras: Inicio</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body class="index">
+<div id="page-wrapper">
+<header id="header" class="alt">
+<h1 id="logo"><a href="index.html">Infostructuras<span> Un Sitio de Daniel Castillo-Castro</span></a></h1>
+<nav id="nav">
+<ul>
+<li class="current"><a href="index.html">Inicio</a></li>
+<li class="submenu">
+<a href="#">Entradas</a>
+<ul>
+<li><a href="0001.html">Áreas de Trabajo</a></li>
+<li><a href="0002.html">Desafíos Científicos</a></li>
+<li><a href="0003.html">Desafíos Políticos</a></li>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</header>
+<section id="banner">
+<div class="inner">
+<header>
+<h2>Infostructuras</h2>
+</header>
+<p>
+Concebimos que todo lo que nos rodea son estructuras de información que se diferencian por su forma, ubicación y entorno.  
+<br/> Esto nos lleva a tomar iniciativas que pretender mejorar la forma en que convivimos y crecemos. 
+</p>
+</div>
+<section id="cta">
+<header>
+<a href="0001.html" class="image featured"><img src="images/pic01.jpg" height="300"/></a>
+<a href="0002.html" class="image featured"><img src="images/pic02.jpg" height="300"/></a>
+<a href="0003.html" class="image featured"><img src="images/pic03.jpg" height="300"/></a>
+</header>
+</section>
+<footer id="footer">
+<ul class="copyright">
+<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+</ul>
+</footer>
+</div>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.dropotron.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/jquery.scrollgress.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
