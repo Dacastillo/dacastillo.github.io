@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Infostructuras: Inicio</title>
+<title>ConceptualLab: Home</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="assets/css/main.css" />
@@ -9,16 +9,18 @@
 <body class="index">
 <div id="page-wrapper">
 <header id="header" class="alt">
-<h1 id="logo"><a href="index.html">Infostructuras<span> Un Sitio de Daniel Castillo-Castro</span></a></h1>
+<h1 id="logo"><a href="index.html">ConceptualLab<span> A program of Daniel Castillo-Castro</span></a></h1>
 <nav id="nav">
 <ul>
-<li class="current"><a href="index.html">Inicio</a></li>
+<li class="current"><a href="index.html">Home</a></li>
 <li class="submenu">
-<a href="#">Entradas</a>
+<a href="#">Levels</a>
 <ul>
-<li><a href="0001.html">Áreas de Trabajo</a></li>
-<li><a href="0002.html">Desafíos Científicos</a></li>
-<li><a href="0003.html">Desafíos Políticos</a></li>
+<li><a href="0001.html">Planck Level</a></li>
+<li><a href="0002.html">Quantum Level</a></li>
+<li><a href="0003.html">Molecular Level</a></li>
+<li><a href="0004.html">Classical Level</a></li>
+<li><a href="0005.html">Space Level</a></li>
 </li>
 </ul>
 </li>
@@ -28,7 +30,7 @@
 <section id="banner">
 <div class="inner">
 <header>
-<h2>Infostructuras</h2>
+<h2>Conceptual Lab</h2>
 </header>
 <p>
 Concebimos que todo lo que nos rodea son estructuras de información que se diferencian por su forma, ubicación y entorno.  
@@ -44,7 +46,7 @@ Concebimos que todo lo que nos rodea son estructuras de información que se dife
 </section>
 <footer id="footer">
 <ul class="copyright">
-<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+<li>2017, Daniel Castillo-Castro </li><li>Web built with: <a href="http://html5up.net">HTML5 UP</a></li>
 </ul>
 </footer>
 </div>
