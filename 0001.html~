@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>ConceptualLab: Planck Level</title>
+<title>Infostructuras: Áreas de Trabajo</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="assets/css/main.css" />
@@ -9,18 +9,16 @@
 <body class="no-sidebar">
 <div id="page-wrapper">
 <header id="header">
-<h1 id="logo"><a href="index.html">ConceptualLab <span>A Project of Daniel Castillo-Castro</span></a></h1>
+<h1 id="logo"><a href="index.html">Infostructuras <span>Un sitio de Daniel Castillo-Castro</span></a></h1>
 <nav id="nav">
 <ul>
-<li class="current"><a href="index.html">Home</a></li>
+<li class="current"><a href="index.html">Inicio</a></li>
 <li class="submenu">
-<a href="#">Levels</a>
+<a href="#">Entradas</a>
 <ul>
-<li><a href="0001.html">Planck Level</a></li>
-<li><a href="0002.html">Quantum Level</a></li>
-<li><a href="0003.html">Molecular Level</a></li>
-<li><a href="0004.html">Classical Level</a></li>
-<li><a href="0005.html">Space Level</a></li>
+<li><a href="0001.html">Áreas de Trabajo</a></li>
+<li><a href="0002.html">Desafíos Científicos</a></li>
+<li><a href="0003.html">Desafíos Políticos</a></li>
 </ul>
 </li>
 </ul>
@@ -28,18 +26,18 @@
 </header>
 <article id="main">
 <header class="container">
-<h2>Título</h2>
+<h2>Áreas de Trabajo</h2>
 </header>
 <section class="wrapper style4 container">
 <div class="content">
 <section>
 <header>
 </header>
-<a class="image featured"><img src="images/pic04.jpg" height="300"/></a>
+<a class="image featured"><img src="images/pic01.png" height="300"/></a>
 <p>Lo que realizamos a nivel de programación es intentar resolver problemas, sin importar el lenguaje en que se realiza. Comprendemos la programación como una especie de método depurado para hacer cualquier tipo de trabajo.</p>
-<a class="image featured"><img src="images/pic01.jpg" height="300"/></a>
+<a class="image featured"><img src="images/pic01.png" height="300"/></a>
 <p>Entendemos la educación no desde el punto de vista clásico o jerárquico, sino como un proceso en el que todos los seres humanos nos educamos mutuamente en igualdad de condiciones. Creemos en entregar la información de manera libre y presentársela a todos los públicos.</p>
-<a class="image featured"><img src="images/pic04.jpg" height="300"/></a>
+<a class="image featured"><img src="images/pic01.png" height="300"/></a>
 <p>La historia del Universo consiste en la historia que organismos anómalos que luchan por permanecer. Expandir las fronteras de lo que conocemos es algo necesario y acá estamos buscando constantemente cómo hacerlo.</p>
 </section>
 </div>
@@ -47,7 +45,7 @@
 </article>
 <footer id="footer">
 <ul class="copyright">
-<li>2017, Daniel Castillo-Castro </li><li>Web built with: <a href="http://html5up.net">HTML5 UP</a></li>
+<li>2017, Daniel Castillo Castro </li><li>Una web hecha con: <a href="http://html5up.net">HTML5 UP</a></li>
 </ul>
 </footer>
 </div>
