@@ -127,18 +127,18 @@ ga( 'send', 'event', 'Contact Form', 'submit', document.getElementById("contact-
 }
 </script>
 
-  <a target="_top" href="sub1.html"><img border="0" src="panel1.png" width="300" height="400" HSPACE="10" VSPACE="10">
-  <a target="_top" href="sub2.html"><img border="0" src="panel2.png" width="300" height="400" HSPACE="10" VSPACE="10"> 
-  <a target="_top" href="sub3.html"><img border="0" src="panel3.png" width="300" height="400" HSPACE="10" VSPACE="10"> 	
-  <a target="_top" href="sub1.html"><img border="0" src="panel1.png" width="300" height="400" HSPACE="10" VSPACE="10">
-  <a target="_top" href="sub2.html"><img border="0" src="panel2.png" width="300" height="400" HSPACE="10" VSPACE="10"> 
-  <a target="_top" href="sub3.html"><img border="0" src="panel3.png" width="300" height="400" HSPACE="10" VSPACE="10"> 
-  <a target="_top" href="sub1.html"><img border="0" src="panel1.png" width="300" height="400" HSPACE="10" VSPACE="10">
-  <a target="_top" href="sub2.html"><img border="0" src="panel2.png" width="300" height="400" HSPACE="10" VSPACE="10">   
-  <a target="_top" href="sub3.html"><img border="0" src="panel3.png" width="300" height="400" HSPACE="10" VSPACE="10">  
-  <a target="_top" href="sub1.html"><img border="0" src="panel1.png" width="300" height="400" HSPACE="10" VSPACE="10">
-  <a target="_top" href="sub2.html"><img border="0" src="panel2.png" width="300" height="400" HSPACE="10" VSPACE="10"> 
-  <a target="_top" href="sub3.html"><img border="0" src="panel3.png" width="300" height="400" HSPACE="10" VSPACE="10">
+  <a target="_top" href="sub1.html"><img border="0" src="panel1.png" width="300" height="400" HSPACE="16" VSPACE="10">
+  <a target="_top" href="sub2.html"><img border="0" src="panel2.png" width="300" height="400" HSPACE="16" VSPACE="10"> 
+  <a target="_top" href="sub3.html"><img border="0" src="panel3.png" width="300" height="400" HSPACE="16" VSPACE="10"> 	
+  <a target="_top" href="sub1.html"><img border="0" src="panel1.png" width="300" height="400" HSPACE="16" VSPACE="10">
+  <a target="_top" href="sub2.html"><img border="0" src="panel2.png" width="300" height="400" HSPACE="16" VSPACE="10"> 
+  <a target="_top" href="sub3.html"><img border="0" src="panel3.png" width="300" height="400" HSPACE="16" VSPACE="10"> 
+  <a target="_top" href="sub1.html"><img border="0" src="panel1.png" width="300" height="400" HSPACE="16" VSPACE="10">
+  <a target="_top" href="sub2.html"><img border="0" src="panel2.png" width="300" height="400" HSPACE="16" VSPACE="10">   
+  <a target="_top" href="sub3.html"><img border="0" src="panel3.png" width="300" height="400" HSPACE="16" VSPACE="10">  
+  <a target="_top" href="sub1.html"><img border="0" src="panel1.png" width="300" height="400" HSPACE="16" VSPACE="10">
+  <a target="_top" href="sub2.html"><img border="0" src="panel2.png" width="300" height="400" HSPACE="16" VSPACE="10"> 
+  <a target="_top" href="sub3.html"><img border="0" src="panel3.png" width="300" height="400" HSPACE="16" VSPACE="10">
 
 
 <footer>
