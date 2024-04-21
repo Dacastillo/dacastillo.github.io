@@ -9,6 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="Daniel Castillo-Castro" />
 
 
 <title>E91 protocol for decode and encode an image using Qiskit</title>
@@ -1748,36 +1749,134 @@ display: none;
 
 <h1 class="title toc-ignore">E91 protocol for decode and encode an image
 using Qiskit</h1>
+<h4 class="author">Daniel Castillo-Castro</h4>
 
 </div>
 
 
 <!-- rnb-text-begin -->
-<p>This is an <a href="http://rmarkdown.rstudio.com">R Markdown</a>
-Notebook. When you execute code within the notebook, the results appear
-beneath the code.</p>
-<p>Try executing this chunk by clicking the <em>Run</em> button within
-the chunk or by placing your cursor inside it and pressing
-<em>Ctrl+Shift+Enter</em>.</p>
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>The E91 Quantum Key Distribution (QKD) protocol is a cryptographic
+method used to securely establish a shared secret key between two
+parties, typically denoted as Alice and Bob, enabling them to encrypt
+and decrypt binary data. This protocol relies on the principles of
+quantum mechanics, specifically exploiting the phenomenon of
+entanglement, to guarantee the confidentiality of the exchanged key. The
+process begins with Alice generating a sequence of photons, each with
+randomly assigned polarizations, which are then transmitted to Bob
+through a quantum channel. Upon reception, Bob measures the polarization
+of each photon, selecting either the rectilinear or diagonal basis for
+each measurement.</p>
+<p>Following the measurements, Bob communicates to Alice the type of
+measurement performed on each photon, and Alice confirms whether Bob’s
+selection matches her own. Subsequently, both parties discard instances
+where Bob’s measurement was incorrect or where photon detection failures
+occurred. The remaining photons’ polarizations serve as the shared
+secret information between Alice and Bob, forming the basis for secure
+communication. To verify the integrity of the shared key, Alice and Bob
+conduct tests to detect any potential eavesdropping attempts during the
+exchange process. Specifically, they evaluate a subset of the shared
+secret bits, discarding those where inconsistencies or signs of
+interference are detected, which could indicate unauthorized access.</p>
+<p>Maintaining the security of the quantum channel is crucial to prevent
+eavesdropping attempts during the key exchange process. Moreover, to
+further fortify the E91 QKD protocol against potential attacks, it is
+feasible to simulate the presence of an eavesdropper, commonly referred
+to as Eve. Eve’s objective is to intercept the shared secret key without
+detection, thus compromising its confidentiality. This simulation
+involves introducing a third party into the quantum communication
+channel, intercepting and measuring the polarization of photons
+transmitted between Alice and Bob.</p>
+<p>To identify Eve’s presence, Alice and Bob conduct additional tests on
+their shared secret bits. For instance, they may randomly select a
+subset of these bits and publicly disclose them. Any interference caused
+by Eve’s interception and measurement of these bits would disrupt the
+quantum state of the photons, resulting in inconsistencies between the
+disclosed bits and the remaining shared secret key. By comparing their
+publicly disclosed bits, Alice and Bob can detect deviations, signaling
+the potential presence of Eve. In the event of detection, Alice and Bob
+discard the compromised shared secret key and initiate the key exchange
+process anew.</p>
+<p>The simulation of an eavesdropper serves as a proactive measure to
+bolster the security and resilience of the E91 QKD protocol in practical
+applications, enabling thorough testing and validation of its
+effectiveness in real-world scenarios.</p>
+</div>
+<div id="code-snippets" class="section level1">
+<h1>Code Snippets</h1>
+</div>
+<div id="analysis" class="section level1">
+<h1>Analysis</h1>
+</div>
+<div id="conclusion" class="section level1">
+<h1>Conclusion</h1>
+<p>In conclusion, Quantum Key Distribution (QKD) represents a
+significant advancement in the realm of secure communication, offering
+information-theoretically secure solutions to the key exchange problem.
+By harnessing the principles of quantum mechanics, QKD provides robust
+protection against eavesdropping and quantum-based attacks, addressing
+the vulnerabilities inherent in traditional encryption algorithms like
+RSA and ECC when faced with the looming threat of quantum computers.</p>
+<p>The ability of QKD to establish a shared key between two parties,
+such as Alice and Bob, without the risk of interception by a third party
+like Eve, underscores its superiority in ensuring confidentiality and
+integrity. Any attempt by Eve to gain insight into the shared key would
+inevitably lead to detectable discrepancies, alerting Alice and Bob to
+potential security breaches.</p>
+<p>Moreover, the versatility of quantum cryptography, particularly QKD,
+extends to its capability to detect eavesdropping attempts, thereby
+enabling proactive measures to maintain secure communication channels.
+Combined with the inherently secure nature of quantum states, this
+feature significantly enhances the security of internet communication,
+offering a compelling alternative to conventional encryption
+methods.</p>
+<p>However, it is essential to acknowledge the existing limitations of
+quantum cryptography, including constraints on long-distance
+communication, implementation costs, and potential challenges related to
+photon polarization. Despite these obstacles, the potential of quantum
+cryptography to revolutionize secure communication by providing a higher
+level of security than current encryption algorithms cannot be
+overstated.</p>
+<p>Overall, while quantum cryptography has yet to be widely deployed on
+a global scale, its practical applications in specific scenarios with
+high-security requirements underscore its importance in advancing the
+future of secure communication and data transmission. With ongoing
+research and development efforts, coupled with advancements in
+implementation techniques such as Python-based simulations, quantum
+cryptography is poised to play a pivotal role in shaping the landscape
+of secure communication in the years to come.</p>
+</div>
+<div id="bibliography" class="section level1">
+<h1>Bibliography</h1>
+<p><a href="https://doi.org/10.3390/s20143940">[1]</a> Naresh, V. S.,
+Nasralla, M. M., Reddi, S., &amp; García-Magariño, I. (2020). Quantum
+Diffie–Hellman Extended to Dynamic Quantum Group Key Agreement for
+e-Healthcare Multi-Agent Systems in Smart Cities. Sensors, 20(14),
+3940.</p>
+<p><a href="https://doi.org/10.3390/cryptography6030036">[2]</a> Riggs,
+B., Partridge, M., Cambou, B., Burke, I., Rios, M. A., Heynssens, J.,
+&amp; Ghanaimiandoab, D. (2022). Multi-Wavelength Quantum Key
+Distribution Emulation with Physical Unclonable Function. Cryptography,
+6(3), 36.</p>
+<p><a href="https://doi.org/10.5121/ijcis.2014.4202">[3]</a> Lopes, M.,
+&amp; Sarwade, N. (2014). Cryptography from Quantum Mechanical
+Viewpoint. International Journal on Cryptography and Information
+Security, 4(2), 13–25.</p>
+<p><a href="https://webthesis.biblio.polito.it/16739/">[4]</a> Ruggeri,
+C. (2020). Quantum Key Distribution in softwarised networks (Doctoral
+dissertation, Politecnico di Torino).</p>
+<p><a href="https://doi.org/10.1126/science.283.5410.2050">[5]</a> Lo,
+H.-K., &amp; Chau, H. F. (1999). Unconditional Security of Quantum Key
+Distribution over Arbitrarily Long Distances. Science, 283(5410),
+2050–2056.</p>
+<p><a href="https://doi.org/10.1007/978-3-642-11731-2_35">[6]</a>
+Stebila, D., Mosca, M., &amp; Lütkenhaus, N. (2010). The Case for
+Quantum Key Distribution (pp. 283–296).</p>
 <!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGxvdChjYXJzKVxuYGBgIn0= -->
-<pre class="r"><code>plot(cars)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>Add a new chunk by clicking the <em>Insert Chunk</em> button on the
-toolbar or by pressing <em>Ctrl+Alt+I</em>.</p>
-<p>When you save the notebook, an HTML file containing the code and
-output will be saved alongside it (click the <em>Preview</em> button or
-press <em>Ctrl+Shift+K</em> to preview the HTML file).</p>
-<p>The preview shows you a rendered HTML copy of the contents of the
-editor. Consequently, unlike <em>Knit</em>, <em>Preview</em> does not
-run any R code chunks. Instead, the output of the chunk when it was last
-run in the editor is displayed.</p>
-<!-- rnb-text-end -->
+</div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiRTkxIHByb3RvY29sIGZvciBkZWNvZGUgYW5kIGVuY29kZSBhbiBpbWFnZSB1c2luZyBRaXNraXQiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KClRoaXMgaXMgYW4gW1IgTWFya2Rvd25dKGh0dHA6Ly9ybWFya2Rvd24ucnN0dWRpby5jb20pIE5vdGVib29rLiBXaGVuIHlvdSBleGVjdXRlIGNvZGUgd2l0aGluIHRoZSBub3RlYm9vaywgdGhlIHJlc3VsdHMgYXBwZWFyIGJlbmVhdGggdGhlIGNvZGUuIAoKVHJ5IGV4ZWN1dGluZyB0aGlzIGNodW5rIGJ5IGNsaWNraW5nIHRoZSAqUnVuKiBidXR0b24gd2l0aGluIHRoZSBjaHVuayBvciBieSBwbGFjaW5nIHlvdXIgY3Vyc29yIGluc2lkZSBpdCBhbmQgcHJlc3NpbmcgKkN0cmwrU2hpZnQrRW50ZXIqLiAKCmBgYHtyfQpwbG90KGNhcnMpCmBgYAoKQWRkIGEgbmV3IGNodW5rIGJ5IGNsaWNraW5nIHRoZSAqSW5zZXJ0IENodW5rKiBidXR0b24gb24gdGhlIHRvb2xiYXIgb3IgYnkgcHJlc3NpbmcgKkN0cmwrQWx0K0kqLgoKV2hlbiB5b3Ugc2F2ZSB0aGUgbm90ZWJvb2ssIGFuIEhUTUwgZmlsZSBjb250YWluaW5nIHRoZSBjb2RlIGFuZCBvdXRwdXQgd2lsbCBiZSBzYXZlZCBhbG9uZ3NpZGUgaXQgKGNsaWNrIHRoZSAqUHJldmlldyogYnV0dG9uIG9yIHByZXNzICpDdHJsK1NoaWZ0K0sqIHRvIHByZXZpZXcgdGhlIEhUTUwgZmlsZSkuCgpUaGUgcHJldmlldyBzaG93cyB5b3UgYSByZW5kZXJlZCBIVE1MIGNvcHkgb2YgdGhlIGNvbnRlbnRzIG9mIHRoZSBlZGl0b3IuIENvbnNlcXVlbnRseSwgdW5saWtlICpLbml0KiwgKlByZXZpZXcqIGRvZXMgbm90IHJ1biBhbnkgUiBjb2RlIGNodW5rcy4gSW5zdGVhZCwgdGhlIG91dHB1dCBvZiB0aGUgY2h1bmsgd2hlbiBpdCB3YXMgbGFzdCBydW4gaW4gdGhlIGVkaXRvciBpcyBkaXNwbGF5ZWQuCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiRTkxIHByb3RvY29sIGZvciBkZWNvZGUgYW5kIGVuY29kZSBhbiBpbWFnZSB1c2luZyBRaXNraXQiCmF1dGhvcjogIkRhbmllbCBDYXN0aWxsby1DYXN0cm8iCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KIyBJbnRyb2R1Y3Rpb24KVGhlIEU5MSBRdWFudHVtIEtleSBEaXN0cmlidXRpb24gKFFLRCkgcHJvdG9jb2wgaXMgYSBjcnlwdG9ncmFwaGljIG1ldGhvZCB1c2VkIHRvIHNlY3VyZWx5IGVzdGFibGlzaCBhIHNoYXJlZCBzZWNyZXQga2V5IGJldHdlZW4gdHdvIHBhcnRpZXMsIHR5cGljYWxseSBkZW5vdGVkIGFzIEFsaWNlIGFuZCBCb2IsIGVuYWJsaW5nIHRoZW0gdG8gZW5jcnlwdCBhbmQgZGVjcnlwdCBiaW5hcnkgZGF0YS4gVGhpcyBwcm90b2NvbCByZWxpZXMgb24gdGhlIHByaW5jaXBsZXMgb2YgcXVhbnR1bSBtZWNoYW5pY3MsIHNwZWNpZmljYWxseSBleHBsb2l0aW5nIHRoZSBwaGVub21lbm9uIG9mIGVudGFuZ2xlbWVudCwgdG8gZ3VhcmFudGVlIHRoZSBjb25maWRlbnRpYWxpdHkgb2YgdGhlIGV4Y2hhbmdlZCBrZXkuIFRoZSBwcm9jZXNzIGJlZ2lucyB3aXRoIEFsaWNlIGdlbmVyYXRpbmcgYSBzZXF1ZW5jZSBvZiBwaG90b25zLCBlYWNoIHdpdGggcmFuZG9tbHkgYXNzaWduZWQgcG9sYXJpemF0aW9ucywgd2hpY2ggYXJlIHRoZW4gdHJhbnNtaXR0ZWQgdG8gQm9iIHRocm91Z2ggYSBxdWFudHVtIGNoYW5uZWwuIFVwb24gcmVjZXB0aW9uLCBCb2IgbWVhc3VyZXMgdGhlIHBvbGFyaXphdGlvbiBvZiBlYWNoIHBob3Rvbiwgc2VsZWN0aW5nIGVpdGhlciB0aGUgcmVjdGlsaW5lYXIgb3IgZGlhZ29uYWwgYmFzaXMgZm9yIGVhY2ggbWVhc3VyZW1lbnQuCgpGb2xsb3dpbmcgdGhlIG1lYXN1cmVtZW50cywgQm9iIGNvbW11bmljYXRlcyB0byBBbGljZSB0aGUgdHlwZSBvZiBtZWFzdXJlbWVudCBwZXJmb3JtZWQgb24gZWFjaCBwaG90b24sIGFuZCBBbGljZSBjb25maXJtcyB3aGV0aGVyIEJvYidzIHNlbGVjdGlvbiBtYXRjaGVzIGhlciBvd24uIFN1YnNlcXVlbnRseSwgYm90aCBwYXJ0aWVzIGRpc2NhcmQgaW5zdGFuY2VzIHdoZXJlIEJvYidzIG1lYXN1cmVtZW50IHdhcyBpbmNvcnJlY3Qgb3Igd2hlcmUgcGhvdG9uIGRldGVjdGlvbiBmYWlsdXJlcyBvY2N1cnJlZC4gVGhlIHJlbWFpbmluZyBwaG90b25zJyBwb2xhcml6YXRpb25zIHNlcnZlIGFzIHRoZSBzaGFyZWQgc2VjcmV0IGluZm9ybWF0aW9uIGJldHdlZW4gQWxpY2UgYW5kIEJvYiwgZm9ybWluZyB0aGUgYmFzaXMgZm9yIHNlY3VyZSBjb21tdW5pY2F0aW9uLiBUbyB2ZXJpZnkgdGhlIGludGVncml0eSBvZiB0aGUgc2hhcmVkIGtleSwgQWxpY2UgYW5kIEJvYiBjb25kdWN0IHRlc3RzIHRvIGRldGVjdCBhbnkgcG90ZW50aWFsIGVhdmVzZHJvcHBpbmcgYXR0ZW1wdHMgZHVyaW5nIHRoZSBleGNoYW5nZSBwcm9jZXNzLiBTcGVjaWZpY2FsbHksIHRoZXkgZXZhbHVhdGUgYSBzdWJzZXQgb2YgdGhlIHNoYXJlZCBzZWNyZXQgYml0cywgZGlzY2FyZGluZyB0aG9zZSB3aGVyZSBpbmNvbnNpc3RlbmNpZXMgb3Igc2lnbnMgb2YgaW50ZXJmZXJlbmNlIGFyZSBkZXRlY3RlZCwgd2hpY2ggY291bGQgaW5kaWNhdGUgdW5hdXRob3JpemVkIGFjY2Vzcy4KCk1haW50YWluaW5nIHRoZSBzZWN1cml0eSBvZiB0aGUgcXVhbnR1bSBjaGFubmVsIGlzIGNydWNpYWwgdG8gcHJldmVudCBlYXZlc2Ryb3BwaW5nIGF0dGVtcHRzIGR1cmluZyB0aGUga2V5IGV4Y2hhbmdlIHByb2Nlc3MuIE1vcmVvdmVyLCB0byBmdXJ0aGVyIGZvcnRpZnkgdGhlIEU5MSBRS0QgcHJvdG9jb2wgYWdhaW5zdCBwb3RlbnRpYWwgYXR0YWNrcywgaXQgaXMgZmVhc2libGUgdG8gc2ltdWxhdGUgdGhlIHByZXNlbmNlIG9mIGFuIGVhdmVzZHJvcHBlciwgY29tbW9ubHkgcmVmZXJyZWQgdG8gYXMgRXZlLiBFdmUncyBvYmplY3RpdmUgaXMgdG8gaW50ZXJjZXB0IHRoZSBzaGFyZWQgc2VjcmV0IGtleSB3aXRob3V0IGRldGVjdGlvbiwgdGh1cyBjb21wcm9taXNpbmcgaXRzIGNvbmZpZGVudGlhbGl0eS4gVGhpcyBzaW11bGF0aW9uIGludm9sdmVzIGludHJvZHVjaW5nIGEgdGhpcmQgcGFydHkgaW50byB0aGUgcXVhbnR1bSBjb21tdW5pY2F0aW9uIGNoYW5uZWwsIGludGVyY2VwdGluZyBhbmQgbWVhc3VyaW5nIHRoZSBwb2xhcml6YXRpb24gb2YgcGhvdG9ucyB0cmFuc21pdHRlZCBiZXR3ZWVuIEFsaWNlIGFuZCBCb2IuCgpUbyBpZGVudGlmeSBFdmUncyBwcmVzZW5jZSwgQWxpY2UgYW5kIEJvYiBjb25kdWN0IGFkZGl0aW9uYWwgdGVzdHMgb24gdGhlaXIgc2hhcmVkIHNlY3JldCBiaXRzLiBGb3IgaW5zdGFuY2UsIHRoZXkgbWF5IHJhbmRvbWx5IHNlbGVjdCBhIHN1YnNldCBvZiB0aGVzZSBiaXRzIGFuZCBwdWJsaWNseSBkaXNjbG9zZSB0aGVtLiBBbnkgaW50ZXJmZXJlbmNlIGNhdXNlZCBieSBFdmUncyBpbnRlcmNlcHRpb24gYW5kIG1lYXN1cmVtZW50IG9mIHRoZXNlIGJpdHMgd291bGQgZGlzcnVwdCB0aGUgcXVhbnR1bSBzdGF0ZSBvZiB0aGUgcGhvdG9ucywgcmVzdWx0aW5nIGluIGluY29uc2lzdGVuY2llcyBiZXR3ZWVuIHRoZSBkaXNjbG9zZWQgYml0cyBhbmQgdGhlIHJlbWFpbmluZyBzaGFyZWQgc2VjcmV0IGtleS4gQnkgY29tcGFyaW5nIHRoZWlyIHB1YmxpY2x5IGRpc2Nsb3NlZCBiaXRzLCBBbGljZSBhbmQgQm9iIGNhbiBkZXRlY3QgZGV2aWF0aW9ucywgc2lnbmFsaW5nIHRoZSBwb3RlbnRpYWwgcHJlc2VuY2Ugb2YgRXZlLiBJbiB0aGUgZXZlbnQgb2YgZGV0ZWN0aW9uLCBBbGljZSBhbmQgQm9iIGRpc2NhcmQgdGhlIGNvbXByb21pc2VkIHNoYXJlZCBzZWNyZXQga2V5IGFuZCBpbml0aWF0ZSB0aGUga2V5IGV4Y2hhbmdlIHByb2Nlc3MgYW5ldy4KClRoZSBzaW11bGF0aW9uIG9mIGFuIGVhdmVzZHJvcHBlciBzZXJ2ZXMgYXMgYSBwcm9hY3RpdmUgbWVhc3VyZSB0byBib2xzdGVyIHRoZSBzZWN1cml0eSBhbmQgcmVzaWxpZW5jZSBvZiB0aGUgRTkxIFFLRCBwcm90b2NvbCBpbiBwcmFjdGljYWwgYXBwbGljYXRpb25zLCBlbmFibGluZyB0aG9yb3VnaCB0ZXN0aW5nIGFuZCB2YWxpZGF0aW9uIG9mIGl0cyBlZmZlY3RpdmVuZXNzIGluIHJlYWwtd29ybGQgc2NlbmFyaW9zLgoKIyBDb2RlIFNuaXBwZXRzCgojIEFuYWx5c2lzCgojIENvbmNsdXNpb24KCkluIGNvbmNsdXNpb24sIFF1YW50dW0gS2V5IERpc3RyaWJ1dGlvbiAoUUtEKSByZXByZXNlbnRzIGEgc2lnbmlmaWNhbnQgYWR2YW5jZW1lbnQgaW4gdGhlIHJlYWxtIG9mIHNlY3VyZSBjb21tdW5pY2F0aW9uLCBvZmZlcmluZyBpbmZvcm1hdGlvbi10aGVvcmV0aWNhbGx5IHNlY3VyZSBzb2x1dGlvbnMgdG8gdGhlIGtleSBleGNoYW5nZSBwcm9ibGVtLiBCeSBoYXJuZXNzaW5nIHRoZSBwcmluY2lwbGVzIG9mIHF1YW50dW0gbWVjaGFuaWNzLCBRS0QgcHJvdmlkZXMgcm9idXN0IHByb3RlY3Rpb24gYWdhaW5zdCBlYXZlc2Ryb3BwaW5nIGFuZCBxdWFudHVtLWJhc2VkIGF0dGFja3MsIGFkZHJlc3NpbmcgdGhlIHZ1bG5lcmFiaWxpdGllcyBpbmhlcmVudCBpbiB0cmFkaXRpb25hbCBlbmNyeXB0aW9uIGFsZ29yaXRobXMgbGlrZSBSU0EgYW5kIEVDQyB3aGVuIGZhY2VkIHdpdGggdGhlIGxvb21pbmcgdGhyZWF0IG9mIHF1YW50dW0gY29tcHV0ZXJzLgoKVGhlIGFiaWxpdHkgb2YgUUtEIHRvIGVzdGFibGlzaCBhIHNoYXJlZCBrZXkgYmV0d2VlbiB0d28gcGFydGllcywgc3VjaCBhcyBBbGljZSBhbmQgQm9iLCB3aXRob3V0IHRoZSByaXNrIG9mIGludGVyY2VwdGlvbiBieSBhIHRoaXJkIHBhcnR5IGxpa2UgRXZlLCB1bmRlcnNjb3JlcyBpdHMgc3VwZXJpb3JpdHkgaW4gZW5zdXJpbmcgY29uZmlkZW50aWFsaXR5IGFuZCBpbnRlZ3JpdHkuIEFueSBhdHRlbXB0IGJ5IEV2ZSB0byBnYWluIGluc2lnaHQgaW50byB0aGUgc2hhcmVkIGtleSB3b3VsZCBpbmV2aXRhYmx5IGxlYWQgdG8gZGV0ZWN0YWJsZSBkaXNjcmVwYW5jaWVzLCBhbGVydGluZyBBbGljZSBhbmQgQm9iIHRvIHBvdGVudGlhbCBzZWN1cml0eSBicmVhY2hlcy4KCk1vcmVvdmVyLCB0aGUgdmVyc2F0aWxpdHkgb2YgcXVhbnR1bSBjcnlwdG9ncmFwaHksIHBhcnRpY3VsYXJseSBRS0QsIGV4dGVuZHMgdG8gaXRzIGNhcGFiaWxpdHkgdG8gZGV0ZWN0IGVhdmVzZHJvcHBpbmcgYXR0ZW1wdHMsIHRoZXJlYnkgZW5hYmxpbmcgcHJvYWN0aXZlIG1lYXN1cmVzIHRvIG1haW50YWluIHNlY3VyZSBjb21tdW5pY2F0aW9uIGNoYW5uZWxzLiBDb21iaW5lZCB3aXRoIHRoZSBpbmhlcmVudGx5IHNlY3VyZSBuYXR1cmUgb2YgcXVhbnR1bSBzdGF0ZXMsIHRoaXMgZmVhdHVyZSBzaWduaWZpY2FudGx5IGVuaGFuY2VzIHRoZSBzZWN1cml0eSBvZiBpbnRlcm5ldCBjb21tdW5pY2F0aW9uLCBvZmZlcmluZyBhIGNvbXBlbGxpbmcgYWx0ZXJuYXRpdmUgdG8gY29udmVudGlvbmFsIGVuY3J5cHRpb24gbWV0aG9kcy4KCkhvd2V2ZXIsIGl0IGlzIGVzc2VudGlhbCB0byBhY2tub3dsZWRnZSB0aGUgZXhpc3RpbmcgbGltaXRhdGlvbnMgb2YgcXVhbnR1bSBjcnlwdG9ncmFwaHksIGluY2x1ZGluZyBjb25zdHJhaW50cyBvbiBsb25nLWRpc3RhbmNlIGNvbW11bmljYXRpb24sIGltcGxlbWVudGF0aW9uIGNvc3RzLCBhbmQgcG90ZW50aWFsIGNoYWxsZW5nZXMgcmVsYXRlZCB0byBwaG90b24gcG9sYXJpemF0aW9uLiBEZXNwaXRlIHRoZXNlIG9ic3RhY2xlcywgdGhlIHBvdGVudGlhbCBvZiBxdWFudHVtIGNyeXB0b2dyYXBoeSB0byByZXZvbHV0aW9uaXplIHNlY3VyZSBjb21tdW5pY2F0aW9uIGJ5IHByb3ZpZGluZyBhIGhpZ2hlciBsZXZlbCBvZiBzZWN1cml0eSB0aGFuIGN1cnJlbnQgZW5jcnlwdGlvbiBhbGdvcml0aG1zIGNhbm5vdCBiZSBvdmVyc3RhdGVkLgoKT3ZlcmFsbCwgd2hpbGUgcXVhbnR1bSBjcnlwdG9ncmFwaHkgaGFzIHlldCB0byBiZSB3aWRlbHkgZGVwbG95ZWQgb24gYSBnbG9iYWwgc2NhbGUsIGl0cyBwcmFjdGljYWwgYXBwbGljYXRpb25zIGluIHNwZWNpZmljIHNjZW5hcmlvcyB3aXRoIGhpZ2gtc2VjdXJpdHkgcmVxdWlyZW1lbnRzIHVuZGVyc2NvcmUgaXRzIGltcG9ydGFuY2UgaW4gYWR2YW5jaW5nIHRoZSBmdXR1cmUgb2Ygc2VjdXJlIGNvbW11bmljYXRpb24gYW5kIGRhdGEgdHJhbnNtaXNzaW9uLiBXaXRoIG9uZ29pbmcgcmVzZWFyY2ggYW5kIGRldmVsb3BtZW50IGVmZm9ydHMsIGNvdXBsZWQgd2l0aCBhZHZhbmNlbWVudHMgaW4gaW1wbGVtZW50YXRpb24gdGVjaG5pcXVlcyBzdWNoIGFzIFB5dGhvbi1iYXNlZCBzaW11bGF0aW9ucywgcXVhbnR1bSBjcnlwdG9ncmFwaHkgaXMgcG9pc2VkIHRvIHBsYXkgYSBwaXZvdGFsIHJvbGUgaW4gc2hhcGluZyB0aGUgbGFuZHNjYXBlIG9mIHNlY3VyZSBjb21tdW5pY2F0aW9uIGluIHRoZSB5ZWFycyB0byBjb21lLgoKIyBCaWJsaW9ncmFwaHkKCltbMV1dKGh0dHBzOi8vZG9pLm9yZy8xMC4zMzkwL3MyMDE0Mzk0MCkgTmFyZXNoLCBWLiBTLiwgTmFzcmFsbGEsIE0uIE0uLCBSZWRkaSwgUy4sICYgR2FyY8OtYS1NYWdhcmnDsW8sIEkuICgyMDIwKS4gUXVhbnR1bSBEaWZmaWXigJNIZWxsbWFuIEV4dGVuZGVkIHRvIER5bmFtaWMgUXVhbnR1bSBHcm91cCBLZXkgQWdyZWVtZW50IGZvciBlLUhlYWx0aGNhcmUgTXVsdGktQWdlbnQgU3lzdGVtcyBpbiBTbWFydCBDaXRpZXMuIFNlbnNvcnMsIDIwKDE0KSwgMzk0MC4gCgpbWzJdXShodHRwczovL2RvaS5vcmcvMTAuMzM5MC9jcnlwdG9ncmFwaHk2MDMwMDM2KSBSaWdncywgQi4sIFBhcnRyaWRnZSwgTS4sIENhbWJvdSwgQi4sIEJ1cmtlLCBJLiwgUmlvcywgTS4gQS4sIEhleW5zc2VucywgSi4sICYgR2hhbmFpbWlhbmRvYWIsIEQuICgyMDIyKS4gTXVsdGktV2F2ZWxlbmd0aCBRdWFudHVtIEtleSBEaXN0cmlidXRpb24gRW11bGF0aW9uIHdpdGggUGh5c2ljYWwgVW5jbG9uYWJsZSBGdW5jdGlvbi4gQ3J5cHRvZ3JhcGh5LCA2KDMpLCAzNi4KCltbM11dKGh0dHBzOi8vZG9pLm9yZy8xMC41MTIxL2lqY2lzLjIwMTQuNDIwMikgTG9wZXMsIE0uLCAmIFNhcndhZGUsIE4uICgyMDE0KS4gQ3J5cHRvZ3JhcGh5IGZyb20gUXVhbnR1bSBNZWNoYW5pY2FsIFZpZXdwb2ludC4gSW50ZXJuYXRpb25hbCBKb3VybmFsIG9uIENyeXB0b2dyYXBoeSBhbmQgSW5mb3JtYXRpb24gU2VjdXJpdHksIDQoMiksIDEz4oCTMjUuIAoKW1s0XV0oaHR0cHM6Ly93ZWJ0aGVzaXMuYmlibGlvLnBvbGl0by5pdC8xNjczOS8pIFJ1Z2dlcmksIEMuICgyMDIwKS4gUXVhbnR1bSBLZXkgRGlzdHJpYnV0aW9uIGluIHNvZnR3YXJpc2VkIG5ldHdvcmtzIChEb2N0b3JhbCBkaXNzZXJ0YXRpb24sIFBvbGl0ZWNuaWNvIGRpIFRvcmlubykuCgpbWzVdXShodHRwczovL2RvaS5vcmcvMTAuMTEyNi9zY2llbmNlLjI4My41NDEwLjIwNTApIExvLCBILi1LLiwgJiBDaGF1LCBILiBGLiAoMTk5OSkuIFVuY29uZGl0aW9uYWwgU2VjdXJpdHkgb2YgUXVhbnR1bSBLZXkgRGlzdHJpYnV0aW9uIG92ZXIgQXJiaXRyYXJpbHkgTG9uZyBEaXN0YW5jZXMuIFNjaWVuY2UsIDI4Myg1NDEwKSwgMjA1MOKAkzIwNTYuIAoKW1s2XV0oaHR0cHM6Ly9kb2kub3JnLzEwLjEwMDcvOTc4LTMtNjQyLTExNzMxLTJfMzUpIFN0ZWJpbGEsIEQuLCBNb3NjYSwgTS4sICYgTMO8dGtlbmhhdXMsIE4uICgyMDEwKS4gVGhlIENhc2UgZm9yIFF1YW50dW0gS2V5IERpc3RyaWJ1dGlvbiAocHAuIDI4M+KAkzI5NikuCg==</div>
 
 
 
