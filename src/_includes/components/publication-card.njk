@@ -1,0 +1,38 @@
+<article class="publication-card{% if publication.featured %} featured{% endif %}">
+  <div class="publication-content">
+    <h3 class="publication-title">
+      {% if publication.doi %}
+      <a href="https://doi.org/{{ publication.doi }}" target="_blank" rel="noopener noreferrer">
+        {{ publication.title }}
+      </a>
+      {% elsif publication.url %}
+      <a href="{{ publication.url }}" target="_blank" rel="noopener noreferrer">
+        {{ publication.title }}
+      </a>
+      {% else %}
+      {{ publication.title }}
+      {% endif %}
+    </h3>
+    
+    <p class="publication-authors">{{ publication.authors }}</p>
+    
+    <p class="publication-journal">
+      <em>{{ publication.journal }}</em>
+      {% if publication.year %}({{ publication.year }}){% endif %}
+    </p>
+    
+    <div class="publication-meta">
+      {% if publication.doi %}
+      <span class="doi-badge">DOI: {{ publication.doi }}</span>
+      {% endif %}
+      
+      {% if publication.openAccess %}
+      <span class="oa-badge">Open Access</span>
+      {% endif %}
+      
+      {% if publication.citations %}
+      <span class="citations-badge">{{ publication.citations }} citations</span>
+      {% endif %}
+    </div>
+  </div>
+</article>

@@ -1,0 +1,29 @@
+- title: "Plasticity in diamond nanoparticles under high pressure"
+  authors: "Castillo Castro, D. et al."
+  journal: "Journal of Materials Science"
+  year: 2024
+  doi: "10.1007/s10853-024-xxxx-x"
+  url: "https://doi.org/10.1007/s10853-024-xxxx-x"
+  openAccess: true
+  citations: 12
+  featured: true
+
+- title: "Nanoporous amorphous carbon structures"
+  authors: "Castillo Castro, D. et al."
+  journal: "Nanomaterials"
+  year: 2023
+  doi: "10.3390/nano130xxxxx"
+  url: "https://doi.org/10.3390/nano130xxxxx"
+  openAccess: true
+  citations: 8
+  featured: true
+
+- title: "Phonon-induced non-equilibrium effects in quantum systems"
+  authors: "Castillo Castro, D. et al."
+  journal: "Quantum Science and Technology"
+  year: 2025
+  doi: "10.1088/2058-9565/xxxxxx"
+  url: "https://doi.org/10.1088/2058-9565/xxxxxx"
+  openAccess: false
+  citations: 5
+  featured: true

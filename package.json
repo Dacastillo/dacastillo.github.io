@@ -1,0 +1,30 @@
+{
+  "name": "dacastillo-github-io",
+  "version": "1.0.0",
+  "description": "Personal website of Daniel Castillo Castro, PhD - Computational Physics, Quantum Computing, Machine Learning",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "clean": "rm -rf _site",
+    "dev": "eleventy --serve --port=8080"
+  },
+  "keywords": [
+    "11ty",
+    "eleventy",
+    "static-site",
+    "personal-website",
+    "physics",
+    "quantum-computing"
+  ],
+  "author": "Daniel Castillo Castro",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "markdown-it": "^14.0.0",
+    "markdown-it-katex": "^2.0.3",
+    "reading-time": "^1.5.0"
+  }
+}

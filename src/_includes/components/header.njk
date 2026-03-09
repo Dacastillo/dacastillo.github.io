@@ -1,0 +1,27 @@
+<header class="site-header">
+  <div class="container header-container">
+    <a href="/" class="site-logo">
+      <span class="site-name">{{ site.author.name }}</span>
+    </a>
+    
+    <nav class="main-nav" aria-label="Main navigation">
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+      
+      <ul class="nav-menu">
+        {% for item in navigation.main %}
+        <li class="nav-item">
+          <a href="{{ item.url }}" class="nav-link{% if page.url == item.url %} active{% endif %}">
+            {{ item.label }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+    
+    <div class="header-actions">
+      {% include "components/social-links.njk" %}
+    </div>
+  </div>
+</header>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  {% include "partials/head.njk" %}
+  {% include "partials/seo.njk" %}
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  {% include "components/header.njk" %}
+  
+  <main id="main-content">
+    {{ content | safe }}
+  </main>
+  
+  {% include "components/footer.njk" %}
+  
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

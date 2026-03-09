@@ -1,0 +1,26 @@
+<article class="blog-card{% if post.featured %} featured{% endif %}">
+  <div class="blog-card-content">
+    <h3 class="blog-card-title">
+      <a href="{{ post.url }}">{{ post.data.title }}</a>
+    </h3>
+    
+    <div class="blog-card-meta">
+      <time datetime="{{ post.data.date | dateIso }}">{{ post.data.date | date }}</time>
+      <span class="reading-time">{{ post.data.readingTime }} min read</span>
+    </div>
+    
+    {% if post.data.description %}
+    <p class="blog-card-excerpt">{{ post.data.description | excerpt }}</p>
+    {% endif %}
+    
+    {% if post.data.tags %}
+    <div class="blog-card-tags">
+      {% for tag in post.data.tags %}
+      <a href="/blog/tags/{{ tag | slug }}" class="tag-link">#{{ tag }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+    
+    <a href="{{ post.url }}" class="blog-card-link">Read more →</a>
+  </div>
+</article>

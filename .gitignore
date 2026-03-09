@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Build output
+_site/
+
+# Package lock
+package-lock.json
+
+# Editor files
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env

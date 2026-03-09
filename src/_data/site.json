@@ -1,0 +1,27 @@
+{
+  "title": "Daniel Castillo Castro, PhD",
+  "subtitle": "Computational Physics · Quantum Computing · Machine Learning",
+  "description": "Postdoctoral researcher specializing in multiscale modeling, quantum computing for chemistry, and machine learning interatomic potentials.",
+  "url": "https://dacastillo.github.io",
+  "author": {
+    "name": "Daniel Castillo Castro",
+    "email": "daniel.castillo@uc.cl",
+    "location": "Santiago, Chile",
+    "avatar": "/assets/images/profile.jpg"
+  },
+  "social": {
+    "github": "https://github.com/Dacastillo",
+    "linkedin": "https://www.linkedin.com/in/esdacastillo/",
+    "orcid": "https://orcid.org/0000-0002-9556-4831",
+    "scholar": "https://scholar.google.com/citations?user=dr7mxMMAAAAJ&hl=es&oi=ao"
+  },
+  "keywords": [
+    "computational physics",
+    "quantum computing",
+    "machine learning",
+    "materials science",
+    "DFT",
+    "MLIP",
+    "nanomaterials"
+  ]
+}

@@ -1,0 +1,21 @@
+- name: "MLIP Pipeline for hBN"
+  description: "Active learning workflow for training machine learning interatomic potentials on hexagonal boron nitride"
+  status: "active"
+  technologies: ["GPAW", "AMP", "LAMMPS", "Python"]
+  repository: "https://github.com/Dacastillo/Moleqlas---group-repo"
+  startDate: "2025-01"
+
+- name: "VQE Ansatz Optimization"
+  description: "Compact ansätze design for variational quantum eigensolvers in quantum chemistry"
+  status: "active"
+  technologies: ["Qiskit", "PennyLane", "Python"]
+  repository: "https://github.com/Dacastillo"
+  startDate: "2024-06"
+
+- name: "Bibliometric Analysis: AI in Chemistry"
+  description: "Large-scale analysis of artificial intelligence applications in chemistry research"
+  status: "completed"
+  technologies: ["Python", "pandas", "bibliometrix"]
+  repository: "https://github.com/Dacastillo"
+  startDate: "2023-03"
+  endDate: "2024-12"

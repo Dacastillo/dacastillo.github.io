@@ -1,0 +1,11 @@
+.git
+node_modules
+src/_includes
+src/_filters
+src/_utils
+src/_data
+package.json
+package-lock.json
+*.md
+!src/content/blog/posts/README.md
+NEW_WEB.md

@@ -1,0 +1,16 @@
+{
+  "main": [
+    { "label": "Home", "url": "/", "icon": "home" },
+    { "label": "About", "url": "/about/", "icon": "user" },
+    { "label": "Research", "url": "/research/", "icon": "book" },
+    { "label": "Blog", "url": "/blog/", "icon": "edit" },
+    { "label": "Resources", "url": "/resources/", "icon": "folder" },
+    { "label": "Contact", "url": "/contact/", "icon": "mail" }
+  ],
+  "social": [
+    { "label": "GitHub", "url": "https://github.com/Dacastillo", "icon": "github" },
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/esdacastillo/", "icon": "linkedin" },
+    { "label": "ORCID", "url": "https://orcid.org/0000-0002-9556-4831", "icon": "orcid" },
+    { "label": "Scholar", "url": "https://scholar.google.com/citations?user=dr7mxMMAAAAJ&hl=es&oi=ao", "icon": "scholar" }
+  ]
+}

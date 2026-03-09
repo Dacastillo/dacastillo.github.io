@@ -1,0 +1,16 @@
+{
+  "name": "Daniel Castillo Castro - Personal Website",
+  "short_name": "DCC",
+  "description": "Postdoctoral researcher in Computational Physics, Quantum Computing, and Machine Learning",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1e3a5f",
+  "icons": [
+    {
+      "src": "/assets/images/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+---
+layout: layouts/base.njk
+---
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">{{ site.author.name }}</h1>
+        <p class="hero-subtitle">{{ site.subtitle }}</p>
+        <p class="hero-description">{{ site.description }}</p>
+        
+        <div class="hero-actions">
+          <a href="/contact/" class="btn btn-primary">Contact</a>
+          <a href="/about/" class="btn btn-secondary">About Me</a>
+        </div>
+        
+        <div class="hero-social">
+          {% include "components/social-links.njk" %}
+        </div>
+      </div>
+      
+      <div class="hero-image">
+        <img src="/assets/images/profile.jpg" alt="{{ site.author.name }}" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include "components/trust-badges.njk" %}
+
+<section class="research-pillars section">
+  <div class="container">
+    <h2 class="section-title">Research Pillars</h2>
+    <div class="pillars-grid">
+      <article class="pillar-card">
+        <h3>Multiscale Nanomaterial Modeling</h3>
+        <p>From quantum to continuum scales, understanding materials across length and time scales.</p>
+      </article>
+      
+      <article class="pillar-card">
+        <h3>Quantum Computing for Chemistry</h3>
+        <p>VQE algorithms, Gibbs states preparation, and quantum simulation of molecular systems.</p>
+      </article>
+      
+      <article class="pillar-card">
+        <h3>Machine Learning Interatomic Potentials</h3>
+        <p>AI-driven force fields for accurate and efficient molecular dynamics simulations.</p>
+      </article>
+      
+      <article class="pillar-card">
+        <h3>Scientific Data & Bibliometrics</h3>
+        <p>Data-driven analysis of scientific trends, including AI applications in chemistry.</p>
+      </article>
+    </div>
+    
+    <div class="section-cta">
+      <a href="/research/" class="btn btn-outline">View All Research →</a>
+    </div>
+  </div>
+</section>
+
+<section class="featured-publications section">
+  <div class="container">
+    <h2 class="section-title">Featured Publications</h2>
+    <div class="publications-list">
+      {% for publication in publications %}
+      {% if loop.index <= 3 %}
+      {% include "components/publication-card.njk" %}
+      {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="section-cta">
+      <a href="/research/#publications" class="btn btn-outline">View All Publications →</a>
+    </div>
+  </div>
+</section>
+
+<section class="latest-blog section">
+  <div class="container">
+    <h2 class="section-title">Latest from the Blog</h2>
+    <div class="blog-grid">
+      {% for post in collections.posts %}
+      {% if loop.index <= 3 %}
+      {% include "components/blog-card.njk" %}
+      {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="section-cta">
+      <a href="/blog/" class="btn btn-outline">View All Posts →</a>
+    </div>
+  </div>
+</section>

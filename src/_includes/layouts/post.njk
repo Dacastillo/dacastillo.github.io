@@ -1,0 +1,69 @@
+---
+layout: layouts/base.njk
+---
+
+<article class="blog-post">
+  <div class="container">
+    <header class="post-header">
+      <div class="post-meta">
+        <time datetime="{{ date | dateIso }}">{{ date | date }}</time>
+        {% if readingTime %}
+        <span class="reading-time">{{ readingTime }} min read</span>
+        {% endif %}
+      </div>
+      
+      <h1 class="post-title">{{ title }}</h1>
+      
+      {% if description %}
+      <p class="post-description">{{ description }}</p>
+      {% endif %}
+      
+      {% if authors %}
+      <div class="post-authors">
+        By {{ authors | join(", ") }}
+      </div>
+      {% endif %}
+    </header>
+    
+    {% if toc %}
+    <nav class="post-toc">
+      <h2>Table of Contents</h2>
+      {{ content | toc }}
+    </nav>
+    {% endif %}
+    
+    <div class="post-content">
+      {{ content | safe }}
+    </div>
+    
+    {% if tags %}
+    <footer class="post-footer">
+      <div class="post-tags">
+        <span>Tags:</span>
+        {% for tag in tags %}
+        <a href="/blog/tags/{{ tag | slug }}" class="tag-link">#{{ tag }}</a>
+        {% endfor %}
+      </div>
+    </footer>
+    {% endif %}
+    
+    <nav class="post-navigation">
+      {% if collections.posts %}
+      {% for post in collections.posts %}
+      {% if post.url == page.url %}
+      {% if forloop.first == false %}
+      <a href="{{ collections.posts[forloop.index0 - 1].url }}" class="post-nav-prev">
+        ← Previous: {{ collections.posts[forloop.index0 - 1].data.title }}
+      </a>
+      {% endif %}
+      {% if forloop.last == false %}
+      <a href="{{ collections.posts[forloop.index0 + 1].url }}" class="post-nav-next">
+        Next: {{ collections.posts[forloop.index0 + 1].data.title }} →
+      </a>
+      {% endif %}
+      {% endif %}
+      {% endfor %}
+      {% endif %}
+    </nav>
+  </div>
+</article>
