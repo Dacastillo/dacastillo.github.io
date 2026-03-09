@@ -1,21 +1,19 @@
-# Dependencies
+# ─── Sistema operativo ────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*~
+*.swp
+
+# ─── Editores ─────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+
+# ─── Logs de auditoría (temporales) ──────────────────────────────────────────
+audit_log.txt
+
+# ─── Node.js (si se añade tooling en el futuro) ───────────────────────────────
 node_modules/
-
-# Build output
-_site/
-
-# Package lock
 package-lock.json
 
-# Editor files
-*.swp
-*.swo
-*~
-.DS_Store
-
-# Logs
-*.log
-npm-debug.log*
-
-# Environment
-.env
+# ─── Sitio generado (Eleventy / Jekyll) ───────────────────────────────────────
+_site/
